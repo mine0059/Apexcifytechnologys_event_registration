@@ -15,12 +15,16 @@
                 "src/*"
             ]
         },
-        "typeRoots": ["./src/@types"]
+         "typeRoots": ["./src/@types"]
     },
     "include": [
         "src/**/*"
     ],
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "ts-node": {
+        "skipProject": false,
+        "transpileOnly": false
+    }
 }
