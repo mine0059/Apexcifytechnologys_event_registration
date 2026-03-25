@@ -1,0 +1,32 @@
+### API V1 ROUTE TEXT
+GET http://localhost:3000/api/v1
+
+
+### Create a New User
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "email": "oghenemineemma@gmail.com",
+    "password": "Password@123",
+    "role": "admin"
+}
+
+### Login User
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "oghenemineemma@gmail.com",
+    "password": "Password@123"
+}
+
+### Refresh Token
+POST http://localhost:3000/api/v1/auth/refresh-token
+Content-Type: application/json
+Cookie: refreshToken=''
+
+### Logout User
+POST http://localhost:3000/api/v1/auth/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWMzYTE1NjIxZmFkMjU2NGJmMzA3NDIiLCJpYXQiOjE3NzQ0MzA2MzYsImV4cCI6MTc3NDQzNDIzNiwic3ViIjoiYWNjZXNzQXBpIn0.7dxL84ia1kAxJ9qaFyQvUfFABXf_tcDrWzD6ju1yvdU
