@@ -9,6 +9,7 @@ const router = Router();
 
 // Routes
 import authRoutes from '@/routes/v1/auth';
+import eventRoutes from '@/routes/v1/event';
 
 // Root route
 router.get('/', (_, res) => {
@@ -22,5 +23,6 @@ router.get('/', (_, res) => {
 });
 
 router.use('/auth', authRoutes);
+router.use('/events', eventRoutes);
 
 export default router;
