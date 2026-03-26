@@ -74,13 +74,15 @@ const uploadEventBanner = (method: 'post' | 'put') => {
 
             next();
 
-        } catch (err: UploadApiErrorResponse | any) {
+        } catch (err: unknown) {
             logger.error('Error while uploading Event banner to Cloudinary', err);
-            res.status(err.http_code).json({
-                code: err.http_code < 500 ? 'ValidationError' : err.name,
-                message: err.message,
+            const cloudinaryErr = err as Partial<UploadApiErrorResponse> & { message?: string; name?: string };
+            const status = typeof cloudinaryErr.http_code === 'number' ? cloudinaryErr.http_code : 500;
+            res.status(status).json({
+                code: status < 500 ? 'ValidationError' : 'ServerError',
+                message: cloudinaryErr.message ?? 'Internal server error',
             });
-        }
+         }
    }   
 }
 

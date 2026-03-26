@@ -17,8 +17,6 @@ const deleteEvent = async (req: Request, res: Response) : Promise<void> => {
         const userId = req.userId;
         const eventId = req.params.eventId;
 
-        console.log(`EventID FROM param ${eventId}`);
-
         const user = await User.findById(userId)
                 .select('role')
                 .lean()

@@ -33,6 +33,8 @@ export const validateQuery = (schema: z.ZodSchema) => (req: Request, res: Respon
         return;
     }
 
+    req.query = result.data as Request['query'];
+
     next();
 };
 

@@ -37,7 +37,7 @@ const getEventById = async (req: Request, res: Response) : Promise<void> => {
                 message: 'Access denied, Insufficient permissions',
             });
 
-            logger.warn('A user tried to access a draft blog', {
+            logger.warn('A user tried to access a draft event', {
                 userId,
                 event,
             });

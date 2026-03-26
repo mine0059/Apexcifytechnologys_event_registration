@@ -19,13 +19,10 @@ const purify = DOMPurify(window);
 
 const updateEvent = async (req: Request, res: Response): Promise<void> => {
     const { title, description, location, date, time, capacity, banner, isVirtual, status } = req.body;
-    const sanitizedDescription = purify.sanitize(description!);
 
     try {
         const userId = req.userId;
         const eventId = req.params.eventId;
-
-        console.log(`EventID FROM param ${eventId}`);
 
         const user = await User.findById(userId)
                     .select('role')
@@ -58,7 +55,7 @@ const updateEvent = async (req: Request, res: Response): Promise<void> => {
         }
 
         if (title) event.title = title;
-        if (description) event.description = sanitizedDescription;
+        if (description) event.description = purify.sanitize(description);
         if (location) event.location = location;
         if (date) event.date = date; // date is already ISO string from validation transform
         if (time) event.time = time;

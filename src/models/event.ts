@@ -23,6 +23,27 @@ export interface IEvent {
     status: 'draft' | 'published'
 }
 
+const bannerSchema = new Schema(
+    {
+        publicId: {
+            type: String,
+            required: [true, 'Banner public id is required']
+        },
+        url: {
+            type: String,
+            required: [true, 'Banner url is required']
+        },
+        width: {
+            type: Number,
+            required: [true, 'Banner width is required']
+        },
+        height: {
+            type: Number,
+            required: [true, 'Banner height is required']
+        },
+    }
+)
+
 const eventSchema = new Schema<IEvent>(
     {
         title: {
@@ -50,22 +71,8 @@ const eventSchema = new Schema<IEvent>(
             required: true,
         },
         banner: {
-            publicId: {
-                type: String,
-                required: [true, 'Banner public id is required']
-            },
-            url: {
-                type: String,
-                required: [true, 'Banner url is required']
-            },
-            width: {
-                type: Number,
-                required: [true, 'Banner width is required']
-            },
-            height: {
-                type: Number,
-                required: [true, 'Banner height is required']
-            },
+            type: bannerSchema,
+            required: [true, 'Banner is required'],
         },
         isVirtual: {
             type: Boolean,
