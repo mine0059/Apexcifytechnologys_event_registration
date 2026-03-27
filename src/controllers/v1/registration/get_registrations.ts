@@ -15,7 +15,7 @@ const getRegistrations = async (req: Request, res: Response) : Promise<void> => 
     try {
         const registrations = await Registration.find({ user: userId })
             .select('event registrationDate')
-            .populate('event', 'name date location')
+            .populate('event', 'title date location')
             .sort({ registrationDate: -1 })
             .lean()
             .exec();

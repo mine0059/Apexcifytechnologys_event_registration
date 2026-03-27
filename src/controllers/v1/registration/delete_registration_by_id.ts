@@ -6,6 +6,7 @@
 import { logger } from "@/lib/winston";
 
 import Registration from "@/models/registration";
+import User from "@/models/user";
 
 import type { Request, Response } from "express";
 
@@ -20,6 +21,16 @@ const deleteRegistrationById = async (req: Request, res: Response) : Promise<voi
             res.status(404).json({
                 code: 'NotFound',
                 message: 'Registration not found',
+            });
+            return;
+        }
+
+        const user = await User.findById(currentUserId).select('role').lean().exec();
+
+        if (!user) {
+            res.status(404).json({
+                code: 'NotFound',
+                message: 'User not found',
             });
             return;
         }

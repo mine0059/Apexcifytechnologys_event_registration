@@ -30,5 +30,7 @@ const registrationschema = new Schema<IRegistration>
         }
     }
 );
+registrationschema.index({ event: 1, user: 1 }, { unique: true });
+registrationschema.index({ user: 1, registrationDate: -1 });
 
 export default model<IRegistration>('Registration', registrationschema);
