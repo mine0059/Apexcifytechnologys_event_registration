@@ -110,8 +110,8 @@ The Event Registration API is a complete event management system backend that en
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/mine0059/event_registration_api.git
-cd event_registration_api
+git clone https://github.com/mine0059/Apexcifytechnologys_event_registration.git
+cd Apexcifytechnologys_event_registration
 ```
 
 2. **Install dependencies**
@@ -402,7 +402,7 @@ We welcome contributions! Here's how to get started:
 
 1. **Fork the repository**
 ```bash
-git clone https://github.com/mine0059/event_registration_api.git
+git clone https://github.com/mine0059/Apexcifytechnologys_event_registration.git
 ```
 
 2. **Create a feature branch**
@@ -516,6 +516,6 @@ This project is licensed under the **Apache License 2.0** - see the LICENSE file
   
 **⭐ If you find this project useful, please star it on GitHub!**
 
-[Issues](https://github.com/mine0059/event_registration_api/issues) • [Discussions](https://github.com/mine0059/event_registration_api/discussions) • [Wiki](https://github.com/mine0059/event_registration_api/wiki)
+[Issues](https://github.com/mine0059/Apexcifytechnologys_event_registration/issues) • [Discussions](https://github.com/mine0059/Apexcifytechnologys_event_registration/discussions) • [Wiki](https://github.com/mine0059/Apexcifytechnologys_event_registration/wiki)
 
 </div>
