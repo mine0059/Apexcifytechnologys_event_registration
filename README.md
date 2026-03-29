@@ -516,6 +516,6 @@ This project is licensed under the **Apache License 2.0** - see the LICENSE file
   
 **⭐ If you find this project useful, please star it on GitHub!**
 
-[Issues](https://github.com/mine0059/Apexcifytechnologys_event_registration.git/issues) • [Discussions](https://github.com/mine0059/Apexcifytechnologys_event_registration.git/discussions) • [Wiki](https://github.com/mine0059/Apexcifytechnologys_event_registration.git/wiki)
+[Issues](https://github.com/mine0059/Apexcifytechnologys_event_registration/issues) • [Discussions](https://github.com/mine0059/Apexcifytechnologys_event_registration/discussions) • [Wiki](https://github.com/mine0059/Apexcifytechnologys_event_registration/wiki)
 
 </div>
